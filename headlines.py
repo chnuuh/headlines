@@ -44,6 +44,7 @@ def get_value_with_fallback(key):
         return request.args.get(key)
     if request.cookies.get(key):
         return request.cookies.get(key)
+    return DEFAULTS[key]
 
 
 @app.route("/")
